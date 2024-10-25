@@ -5,11 +5,11 @@ import "testing/fstest"
 
 func main() {
    fs := fstest.MapFS{
-      "tmp/hello.txt": {
+      "hello.txt": {
          Data: []byte("hello, world"),
       },
    }
-   data, err := fs.ReadFile("tmp/hello.txt")
+   data, err := fs.ReadFile("hello.txt")
    if err != nil {
       panic(err)
    }
