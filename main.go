@@ -1,4 +1,6 @@
 package main
+
+// A directory can be added like this: fstest.MapFS{"tmp": {Mode: fs.ModeDir}}.
 import "testing/fstest"
 
 func main() {
