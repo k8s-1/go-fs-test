@@ -20,3 +20,5 @@ func Equal[V comparable](t *testing.T, got, expected V) {
 // Usage:
 //
 // assert.Equal(t, response, `{"status":"ok"}`)
+
+// no need for third party test lib like testify!
