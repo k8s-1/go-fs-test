@@ -9,7 +9,7 @@ func main() {
          Data: []byte("hello, world"),
       },
    }
-   data, err := fs.ReadFile("hello.txt")
+   data, err := fs.ReadFile("tmp/hello.txt")
    if err != nil {
       panic(err)
    }
