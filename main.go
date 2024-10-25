@@ -5,7 +5,7 @@ import "testing/fstest"
 
 func main() {
    fs := fstest.MapFS{
-      "hello.txt": {
+      "tmp/hello.txt": {
          Data: []byte("hello, world"),
       },
    }
