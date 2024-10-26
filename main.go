@@ -4,9 +4,10 @@ import (
 	"fmt"
 	"log"
 	"os"
+  "path/filepath"
 )
 
-const BasePath = "/config"
+const BasePath = "config"
 
 func main() {
 	_, err := ProcessFile(BasePath, "dev")
@@ -16,7 +17,7 @@ func main() {
 }
 
 func ProcessFileHardToTest(environment string) error {
-	filePath := fmt.Sprintf("%s/%s.cue", BasePath, environment)
+	filePath := filepath.Join(BasePath, environment)
 	data, err := os.ReadFile(filePath)
 	if err != nil {
 		return fmt.Errorf("failed to read file: %w", err)
@@ -35,7 +36,8 @@ func ProcessFileHardToTest(environment string) error {
 // Accept the base path as a parameter in ProcessFile instead.
 
 func ProcessFile(basePath, environment string) (string, error) {
-	filePath := fmt.Sprintf("%s%s.cue", basePath, environment)
+  f := environment + ".cue"
+	filePath := filepath.Join(BasePath, f)
 	data, err := os.ReadFile(filePath)
 	if err != nil {
 		return "", fmt.Errorf("failed to read file: %w", err)
