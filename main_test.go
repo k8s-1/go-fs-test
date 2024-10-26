@@ -5,7 +5,7 @@ import (
 )
 
 func TestProcessFile(t *testing.T) {
-	basePath := "testdata"
+	basePath := "testdata/versions/"
 	env := "dev"
 
 	err := ProcessFile(basePath, env)
