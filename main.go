@@ -9,7 +9,7 @@ import (
 const BasePath = "/app/config"
 
 func main() {
-	err := ProcessFile(BasePath, "dev")
+	_, err := ProcessFile(BasePath, "dev")
 	if err != nil {
 		log.Fatalf("%v", err)
 	}
