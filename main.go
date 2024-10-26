@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-const BasePath = "/app/config"
+const BasePath = "/config"
 
 func main() {
 	_, err := ProcessFile(BasePath, "dev")
