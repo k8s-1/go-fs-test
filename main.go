@@ -18,6 +18,7 @@ func main() {
 
 // Using a global constant inside a function makes
 // testing difficult. So don't.
+
 func ProcessFileHardToTest(environment string) error {
 	filePath := filepath.Join(BasePath, environment)
 	data, err := os.ReadFile(filePath)
