@@ -1,6 +1,8 @@
 package main
 
 import (
+	"log"
+	"os/exec"
 	"testing"
 )
 
@@ -11,4 +13,13 @@ func TestProcessFile(t *testing.T) {
 	if err != nil {
 		t.Fatalf("ProcessFile returned an error: %v", err)
 	}
+}
+
+func teardown() {
+	defer func() {
+		cmd := exec.Command("git", "restore", "testdata")
+		if err := cmd.Run(); err != nil {
+			log.Fatalf("Failed to restore testdata: %v\n", err)
+		}
+	}()
 }
