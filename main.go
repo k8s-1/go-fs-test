@@ -2,11 +2,9 @@ package main
 
 import (
 	"fmt"
-	"io"
 	"log"
 	"os"
 	"testing"
-	"testing/fstest"
 )
 
 const BasePath = "/app/config"
