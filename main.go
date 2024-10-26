@@ -66,7 +66,7 @@ func TestProcessFile(t *testing.T) {
 
 	// Write test data to the temporary file
 	content := []byte("hello, world")
-	if err := os.WriteFile(filePath, content, 0o666); err != nil {
+	if err := os.WriteFile(filePath, content, 0o660); err != nil {
 		t.Fatalf("Failed to write test file: %v", err)
 	}
 
