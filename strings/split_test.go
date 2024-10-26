@@ -14,12 +14,12 @@ func TestSplit(t *testing.T) {
 }
 
 func TableTestSplit(t *testing.T) {
-  t.Parallel() // marks Split as capable of running in parallel with other tests
+	t.Parallel() // marks Split as capable of running in parallel with other tests
 
 	tests := []struct {
 		// in
-		s string
-		sep   string
+		s   string
+		sep string
 
 		// out
 		want []string
