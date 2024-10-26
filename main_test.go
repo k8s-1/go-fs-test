@@ -7,6 +7,8 @@ import (
 )
 
 func TestProcessFile(t *testing.T) {
+  defer teardown()
+
 	basePath := "testdata/versions"
 	env := "dev"
 	_, err := ProcessFile(basePath, env)
