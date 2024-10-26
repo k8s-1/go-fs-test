@@ -30,7 +30,7 @@ func ProcessFileHardToTest(environment string) error {
 	return nil
 }
 
-// Refactor the code.
+// Instead, refactor the code.
 //
 // To make it more testable, you can refactor the code as follows:
 //
