@@ -35,7 +35,7 @@ func ProcessFileHardToTest(environment string) error {
 // Accept the base path as a parameter in ProcessFile instead.
 
 func ProcessFile(basePath, environment string) error {
-	filePath := fmt.Sprintf("%s/%s.yaml", basePath, environment)
+	filePath := fmt.Sprintf("%s%s.cue", basePath, environment)
 	data, err := os.ReadFile(filePath)
 	if err != nil {
 		return fmt.Errorf("failed to read file: %w", err)
