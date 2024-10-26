@@ -7,7 +7,7 @@ import (
 )
 
 func TestProcessFile(t *testing.T) {
-  defer teardown()
+  defer clean()
 
 	basePath := "testdata/versions"
 	env := "dev"
@@ -17,7 +17,7 @@ func TestProcessFile(t *testing.T) {
 	}
 }
 
-func teardown() {
+func clean() {
 	cmd := exec.Command("git", "restore", "testdata")
 	if err := cmd.Run(); err != nil {
 		log.Fatalf("Failed to restore testdata: %v\n", err)
