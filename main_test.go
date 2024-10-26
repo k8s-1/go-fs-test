@@ -31,3 +31,11 @@ func TestProcessFile(t *testing.T) {
 		t.Fatalf("ProcessFile returned an error: %v", err)
 	}
 }
+
+func setup() {
+    // Set up test environment
+}
+
+func teardown() {
+    // Clean up test environment
+}
