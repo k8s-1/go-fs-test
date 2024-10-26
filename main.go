@@ -40,7 +40,9 @@ func ProcessFileHardToTest(environment string) error {
 
 func ProcessFile(basePath, environment string) (string, error) {
   f := environment + ".cue"
-	filePath := filepath.Join(BasePath, f)
+  p := filepath.FromSlash(basePath)
+	filePath := filepath.Join(p, f)
+
 	data, err := os.ReadFile(filePath)
 	if err != nil {
 		return "", fmt.Errorf("failed to read file: %w", err)
