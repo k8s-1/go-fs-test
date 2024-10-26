@@ -16,10 +16,8 @@ func TestProcessFile(t *testing.T) {
 }
 
 func teardown() {
-	defer func() {
-		cmd := exec.Command("git", "restore", "testdata")
-		if err := cmd.Run(); err != nil {
-			log.Fatalf("Failed to restore testdata: %v\n", err)
-		}
-	}()
+	cmd := exec.Command("git", "restore", "testdata")
+	if err := cmd.Run(); err != nil {
+		log.Fatalf("Failed to restore testdata: %v\n", err)
+	}
 }
