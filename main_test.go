@@ -6,7 +6,7 @@ import (
 
 func TestProcessFile(t *testing.T) {
 	// Define the test base path and environment
-	basePath := "testdata/config"
+	basePath := "testdata"
 	env := "dev"
 
 	// Call ProcessFile using the testdata directory
