@@ -18,7 +18,7 @@ func TableTestSplit(t *testing.T) {
 
 	tests := []struct {
 		// in
-		input string
+		s string
 		sep   string
 
 		// out
@@ -32,8 +32,8 @@ func TableTestSplit(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		t.Run(tt.input, func(t *testing.T) {
-			got := Split(tt.input, tt.sep)
+		t.Run(tt.s, func(t *testing.T) {
+			got := Split(tt.s, tt.sep)
 			if !reflect.DeepEqual(got, tt.want) {
 				t.Fatalf("expected: %v, got: %v", tt.want, got)
 			}
